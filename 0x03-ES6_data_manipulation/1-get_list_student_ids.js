@@ -2,7 +2,7 @@ const getListStudentIds = (listObjs) => {
     let newList = [];
 
     if (!(listObjs instanceof Array)) {
-        return listObjs;
+        return [];
     }
 
     newList = listObjs.map((stds) => stds.id);
