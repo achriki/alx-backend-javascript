@@ -1,6 +1,6 @@
-export const weakMap = new weakMap();
+export const weakMap = new WeakMap();
 
-const queryAPI = (endpoint) => {
+export const queryAPI = (endpoint) => {
     if (!weakMap.has(endpoint)) {
         weakMap.set(endpoint, 0);
     }
@@ -10,5 +10,3 @@ const queryAPI = (endpoint) => {
         throw new Error('Endpoint load is high');
     }
 }
-
-export default queryAPI;

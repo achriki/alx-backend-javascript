@@ -1,4 +1,4 @@
-const updateUniqueItems = (map) => {
+export default updateUniqueItems = (map) => {
     if (!(map instanceof Map)) {
         throw new Error('Cannot process');
     }
@@ -9,5 +9,3 @@ const updateUniqueItems = (map) => {
         }
     });
 }
-
-export default updateUniqueItems;
