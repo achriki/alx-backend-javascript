@@ -1,13 +1,5 @@
-const getStudentsByLocation = (listObjs, city) => {
-    let newList = [];
-
-    if (!(listObjs instanceof Array)) {
-        return listObjs;
-    }
-    
-    newList = listObjs.filter((stds) => stds.location == city);
-
-    return newList;
+const getStudentsByLocation = (students, city) => {
+    return students.filter((student) => student.location === city);
 }
 
 export default getStudentsByLocation;
