@@ -1,9 +1,12 @@
-const getListStudentIds = (listObjs)=>{
+const getListStudentIds = (listObjs) => {
     let newList = [];
-    if (!(listObjs instanceof Array)){
+
+    if (!(listObjs instanceof Array)) {
         return listObjs;
     }
+
     newList = listObjs.map((stds) => stds.id);
+    
     return newList;
 }
 
