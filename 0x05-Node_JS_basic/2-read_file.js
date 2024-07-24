@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 
 const countStudents = (filePath) => {
     if(!fs.existsSync(filePath)){
@@ -26,13 +26,13 @@ const countStudents = (filePath) => {
     console.log('Number of students:', totalNumber);
 
     for (const field of dbFieldGroup){
-        studentGroups[field] = []
+        studentGroups[field] = [];
     }
 
     for(const line of fileLines.slice(1)){
         const studentField = line.split(',')[dbFieldNames.length - 1]
         if(dbFieldGroup.has(studentField)){
-            studentGroups[studentField].push(line.split(',')[0])
+            studentGroups[studentField].push(line.split(',')[0]);
         }
     }
 
@@ -40,8 +40,8 @@ const countStudents = (filePath) => {
         const numberOfStudent = students.length;
         const studentsList = students.join(', ');
 
-        console.log(`Number of students in ${field}: ${numberOfStudent}. List: ${studentsList}`)
+        console.log(`Number of students in ${field}: ${numberOfStudent}. List: ${studentsList}`);
     }
 }
 
-module.exports = countStudents
+module.exports = countStudents;
