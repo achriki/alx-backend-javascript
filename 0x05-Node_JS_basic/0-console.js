@@ -5,7 +5,7 @@
  */
 // Arrow function
 const displayMessage = (input) => {
-    process.stdout.write(input + '\n')
+   console.log(input)
 }
 
 /**
